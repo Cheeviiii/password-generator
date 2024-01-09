@@ -8,8 +8,14 @@ import { useAppContext } from "@/context/AppStateContext";
 import { toastError } from "@/lib/toasts";
 
 export default function Home() {
-  const { password, setPassword, passwordLength, setPasswordLength, checkboxValues, setCheckboxValues } =
-    useAppContext();
+  const {
+    password,
+    setPassword,
+    passwordLength,
+    setPasswordLength,
+    checkboxValues,
+    setCheckboxValues,
+  } = useAppContext();
 
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = e.target;
@@ -20,12 +26,20 @@ export default function Home() {
   };
 
   const handleCopy = () => {
-    !password ? toastError("Nenhuma senha para ser copiada") : copyText(password);
+    !password
+      ? toastError("Nenhuma senha para ser copiada")
+      : copyText(password);
   };
 
   const handleGeneratePassword = () => {
-    const { includeLowercase, includeUppercase, includeSpecialCharacters } = checkboxValues;
-    const generatedPassword = genPassword(includeLowercase, includeUppercase, includeSpecialCharacters, passwordLength);
+    const { includeLowercase, includeUppercase, includeSpecialCharacters } =
+      checkboxValues;
+    const generatedPassword = genPassword(
+      includeLowercase,
+      includeUppercase,
+      includeSpecialCharacters,
+      passwordLength
+    );
     setPassword(generatedPassword);
   };
 

@@ -92,6 +92,7 @@
   height: 30px;
   opacity: 0.8;
   outline: none;
+  cursor: pointer;
 }
 
 .passwordOptions > div {
@@ -171,22 +172,17 @@
   color: black;
   font-size: 22px;
   font-weight: bold;
-
-  background: #00ffa3;
-
+  background: #15b379;
   appearance: none;
   border: none;
-
   padding: 15px 15px;
   border-radius: 24px;
-
   cursor: pointer;
-
-  transition: 0.2s;
+  transition: 0.3s ease-in-out;
 }
 
 .passwordButton > button:hover {
-  transform: scale(1.1);
+  background: #00ffa3;
 }
 
 @media (max-width: 768px) {
