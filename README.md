@@ -2,6 +2,10 @@
 
 Projeto que gera uma senha totalmente aleátoria e segura.
 
+## Tecnologias
+
+- Next
+
 ## Funcionalidades
 
 - Escolher tamanho da senha entre 5 e 20 caracteres 
