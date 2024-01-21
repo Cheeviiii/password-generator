@@ -41,8 +41,6 @@ npm install
 4. **Inicie o servidor:**
 
 ```bash
-yarn run start
-# ou
 npm run start
 ```
 
